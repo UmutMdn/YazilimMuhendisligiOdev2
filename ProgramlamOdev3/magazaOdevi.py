@@ -49,7 +49,24 @@ class Magaza:
 magaza_dict = {}
 nesneListesi = []
 
+while True:
 
+    magaza_adi = input("Mağaza adı giriniz (Çıkmak için h tuşuna basınız): ")
+    if magaza_adi == "h":
+        break
+    satici_adi = input("Satıcı adı giriniz: ")
+    satici_cinsi = input("Satıcı cinsi giriniz: ")
+    satis_tutari = float(input("Satış tutarı giriniz: "))
+
+
+    magaza = Magaza(magaza_adi, satici_adi, satici_cinsi)
+    magaza.set_satis_tutari(satis_tutari)
+    nesneListesi.append(magaza)
+    key = (magaza_adi, satici_adi, satici_cinsi)
+    if key in magaza_dict:
+        magaza_dict[key] += satis_tutari
+    else:
+        magaza_dict[key] = satis_tutari
 
 
 
