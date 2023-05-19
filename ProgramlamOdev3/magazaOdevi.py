@@ -67,5 +67,14 @@ while True:
     else:
         magaza_dict[key] = satis_tutari
 
+satici_toplam_dict = {}
+for key, value in magaza_dict.items():
+    magaza_adi, satici_adi, satici_cinsi = key
+    satis_tutari = value
+    if satici_adi in satici_toplam_dict:
+        satici_toplam_dict[satici_adi] += satis_tutari
+    else:
+        satici_toplam_dict[satici_adi] = satis_tutari
+
 
 
