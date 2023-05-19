@@ -93,3 +93,16 @@ for key, value in magaza_dict.items():
         magaza_toplam_dict[magaza_adi] += satis_tutari
     else:
         magaza_toplam_dict[magaza_adi] = satis_tutari
+
+
+for i in range(len(magaza_dict)):
+    print(nesneListesi[i])
+
+print("\n")
+
+for magaza_adi, toplam_satis in magaza_toplam_dict.items():
+    print(f"{magaza_adi} mağazasının toplam satış tutarı: {toplam_satis}")
+
+print("\n")
+for satici_adi, toplam_satis in satici_toplam_dict.items():
+    print(f"{satici_adi} satıcısının toplam satış tutarı: {toplam_satis}")
