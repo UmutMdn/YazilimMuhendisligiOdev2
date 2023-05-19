@@ -30,10 +30,24 @@ class Magaza:
         return self.__satis_tutari
 
 
+    def magaza_satis_tutar(self, magaza_adi, satici_adi):
+        magaza_toplam_dict = {}
+        for key, value in magaza_dict.items():
+            magaza_adi = key[0]
+            satis_tutari = value
+            if magaza_adi in magaza_toplam_dict:
+                magaza_toplam_dict[magaza_adi] += satis_tutari
+            else:
+                magaza_toplam_dict[magaza_adi] = satis_tutari
+        return magaza_toplam_dict[magaza_adi]
+
+    def __str__(self):
+        toplamMagzaSatis = self.magaza_satis_tutar(self.__magaza_adi,self.__satici_adi)
+        return f"Mağaza adı: {self.get_magaza_adi()}, Satıcı adı: {self.get_satici_adi()}, Satıcı cinsi: {self.get_satici_cinsi()}, Satış tutarı: {self.get_satis_tutari()}"
 
 
-
-
+magaza_dict = {}
+nesneListesi = []
 
 
 
