@@ -76,5 +76,12 @@ for key, value in magaza_dict.items():
     else:
         satici_toplam_dict[satici_adi] = satis_tutari
 
-
+magaza_toplam_dict = {}
+for key, value in magaza_dict.items():
+    magaza_adi = key[0]
+    satis_tutari = value
+    if magaza_adi in magaza_toplam_dict:
+        magaza_toplam_dict[magaza_adi] += satis_tutari
+    else:
+        magaza_toplam_dict[magaza_adi] = satis_tutari
 
